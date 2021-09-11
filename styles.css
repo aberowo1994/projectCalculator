@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
+*,*::before,*::after {
+    box-sizing: border-box;
+    font-family: 'Crimson Text', serif;
+    font-weight: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #333;
+    box-sizing: border-box;
+}
+
+.cal--grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto)repeat(5, 100px);
+    border-top: 1px solid #fff;
+}
+
+button {
+    cursor: pointer;
+    font-size: 30px;
+    background: #333;
+    outline: none;
+    border: 1px solid transparent;
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+}
+button:hover {
+    background: rgba(0,0,0,0.3);
+}
+
+.output {
+    grid-column: 1/-1;
+    background-color: #FAF7FA;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+    width: 100%;
+    height: 150px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+
+.output .prev--op {
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.output .current--op {
+    font-size: 2.5rem;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.data-equal {
+    grid-row: span 2;
+    background-color: #FF0059;
+    border-radius: 20px;
+    width: 70px;
+    margin-left: 20px;
+
+    font-size: 3rem;
+
+}
+
+.clear, .divide, .mul, .del {
+    color: #FF0059;
+    font-weight: bolder;
+}
